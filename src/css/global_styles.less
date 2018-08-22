@@ -1,0 +1,549 @@
+@font_light: segoe-wp-light, Arial, sans-serif;
+@font_regular: SegoeWPN, Arial, sans-serif;
+@font_bold: Segoe-bold, Arial, sans-serif;
+@font_helvetica_light: HelveticaLTStd-Light, Arial, sans-serif;
+@font_helvetica_roman: HelveticaLTStd-Roman, Arial, sans-serif;
+@green: #79b260;
+@white: #ffffff;
+@gray: #6d6d6d;
+@black: #000000;
+
+.vertical(@start-color; @end-color; @start-percent; @end-percent) {
+  background-image: -webkit-linear-gradient(bottom, @start-color @start-percent, @end-color @end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(bottom, @start-color @start-percent, @end-color @end-percent); // Opera 12
+  background-image: linear-gradient(to top, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+.b-page {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  &__header {
+    width: 100%;
+    height: auto;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+  }
+  &__footer {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.b-header {
+  width: 100%;
+  height: auto;
+  &__top-line {
+    text-align: right;
+    background-color: #424242;
+    width: 80%;
+    padding: 0 10% 0 10%;
+  }
+  &__nav-item {
+    display: inline-block;
+    margin-right: 2%;
+  }
+  &__nav-link {
+    text-decoration: none;
+    font-family: @font_light;
+    font-size: 13px;
+    color: #f2f2f2;
+  }
+  &__nav-main {
+    .vertical(@start-color: #ececec; @end-color: #fdfdfd; @start-percent: 30%; @end-percent: 95%);
+    width: 80%;
+    padding: 1% 10% 1% 10%;
+    height: auto;
+  }
+}
+
+.b-nav-main {
+  width: 100%;
+  &__logo {
+    display: inline-block;
+    width: 10%;
+    vertical-align: middle;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__search {
+    display: inline-block;
+    width: 48%;
+    vertical-align: middle;
+    margin-left: 5%;
+  }
+  &__aside-section {
+    display: inline-block;
+    width: 28%;
+    margin-left: 7%;
+    vertical-align: middle;
+  }
+}
+
+.b-search-form {
+  width: 100%;
+  height: auto;
+  &__input {
+    width: 70%;
+    float: left;
+    outline: 3px solid @green;
+    outline-offset: -3px;
+    height: 34px;
+    padding: 0 1% 0 1%;
+    border: none;
+  }
+  &__button {
+    width: 25%;
+    float: left;
+    border: none;
+    background-color: @green;
+    height: 34px;
+    font-size: 1.3vw;
+    font-family: @font_regular;
+    color: @white;
+    .fa-search {
+      margin-right: 5px;
+    }
+  }
+}
+
+.b-left-section {
+  position: relative;
+  display: inline-block;
+  width: 58%;
+  float: left;
+  border-right: 1px solid #c9c9c9;
+  &__icon {
+    color: @green;
+    font-size: 1.6vw;
+  }
+  &__title {
+    font-family: @font_regular;
+    font-size: 1.4vw;
+    color: @gray;
+    cursor: pointer;
+  }
+  &__item {
+    font-family: @font_regular;
+    font-size: 1.1vw;
+    color: @gray;
+  }
+  &__value {
+    font-size: 1.5vw;
+    font-family: @font_bold;
+    color: @gray;
+  }
+  &__button {
+    padding: 1% 5% 1% 5%;
+    border: 1px solid @black;
+    background-color: #3e3e3e;
+    border-radius: 10%;
+    color: @white;
+    font-family: @font_regular;
+    font-size: 1.1vw;
+    margin-left: 5%;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+.b-overlay {
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  top: -25%;
+}
+
+.js-tooltip {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  background-color: @white;
+  width: 300px;
+  padding: 10%;
+  height: auto;
+  z-index: 99;
+  font-size: 15px;
+  font-family: @font_bold;
+  box-shadow: 0 0 10px 2px #cdcdcd;
+  border-radius: 10px;
+  display: none;
+  &__section-item {
+    margin-bottom: 5%;
+  }
+  &__title {
+    display: block;
+    margin-bottom: 5%;
+  }
+  &__item {
+    display: inline-block;
+    font-family: @font_light;
+    color: #454545;
+    width: 40%;
+  }
+  &__quantity {
+    display: inline-block;
+    width: 30%;
+  }
+  &__count {
+    width: 30px;
+    text-align: center;
+    font-family: @font_bold;
+    border: none;
+    font-size: 12px;
+  }
+  &__input-plus {
+    font-family: @font_bold;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: @green;
+  }
+  &__input-minus {
+    font-family: @font_bold;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: @green;
+  }
+  &__cy {
+    margin-left: 10px;
+  }
+  &__remove {
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+    line-height: 0.7;
+  }
+  &__total {
+    margin-top: 5%;
+    text-align: right;
+    font-size: 16px;
+  }
+}
+
+.b-right-section {
+  display: inline-block;
+  width: auto;
+  float: left;
+  padding-left: 3%;
+  position: relative;
+  &__icon {
+    font-size: 1vw;
+    color: #f7f7f7;
+    background-color: #424242;
+    padding: 8%;
+    border-radius: 100%;
+  }
+  &__title {
+    font-size: 1.5vw;
+    color: @gray;
+    margin-top: 10%;
+    cursor: pointer;
+    position: relative;
+  }
+  &__badge {
+    position: absolute;
+    right: -10%;
+    top: -55%;
+    font-size: 0.8vw;
+    background-color: @green;
+    color: #f7f7f7;
+    padding: 2% 6% 2% 6%;
+    border-radius: 35%;
+  }
+}
+
+.js-tooltip-wish {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: @white;
+  width: 300px;
+  padding: 20%;
+  height: auto;
+  z-index: 99;
+  font-size: 15px;
+  font-family: @font_bold;
+  box-shadow: 0 0 10px 2px #cdcdcd;
+  border-radius: 10px;
+  display: none;
+}
+
+.b-main {
+  width: 80%;
+  padding: 0 10% 0 10%;
+}
+
+.b-content {
+  width: 80%;
+  padding: 2% 10% 0 10%;
+  &__aside-left {
+    display: inline-block;
+    width: 20%;
+    margin-right: 1%;
+    border: 1px solid #ced3d6;
+    vertical-align: top;
+  }
+  &__main {
+    display: inline-block;
+    width: 78%;
+    vertical-align: top;
+    border: 1px solid #dedede;
+  }
+  .js-active {
+    display: block;
+  }
+  &_border_none {
+    border: none;
+  }
+}
+
+.b-nav-menu {
+  width: 80%;
+  padding: 0 10% 0 10%;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #dedede;
+  text-align: center;
+  &__item {
+    position: relative;
+    display: inline-block;
+    width: 10.7%;
+    &:hover > .b-nav-menu__sub-menu {
+      display: block;
+    }
+    &:hover {
+      background-color: @green;
+    }
+  }
+  &__link {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: @font_regular;
+    color: @gray;
+    padding: 8px 0 8px 0;
+    &:hover {
+      color: @white;
+    }
+  }
+  &__sub-menu {
+    position: absolute;
+    top: 103%;
+    background-color: #efefef;
+    z-index: 99;
+    padding: 5%;
+    display: none;
+  }
+  &__sub-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1vw;
+    font-family: @font_helvetica_light;
+    color: #000000;
+    margin-bottom: 3%;
+    &:hover {
+      color: @green;
+    }
+  }
+  &_current-style {
+    background-color: @green;
+    color: @white;
+  }
+}
+
+.b-tabs-pager {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  text-align: right;
+  &__item {
+    display: inline-block;
+    width: 1.8vw;
+    height: 1.8vw;
+    background-color: @white;
+    text-align: center;
+    cursor: pointer;
+  }
+  &__link {
+    text-decoration: none;
+    color: #989898;
+    font-family: @font_regular;
+    font-size: 1.2vw;
+  }
+  &_current {
+    outline: 1px solid #ced3d6;
+    border-bottom: 3px solid #81bd66;
+  }
+}
+
+.b-footer {
+  width: 80%;
+  height: auto;
+  margin-top: 2%;
+  padding: 2% 10% 2% 10%;
+  background-color: #464341;
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+    margin-right: 0.9%;
+  }
+  &__title {
+    font-size: 1.3vw;
+    font-family: @font_light;
+    color: #d3d3d2;
+  }
+  &_margin-right {
+    margin-right: 0;
+  }
+  &__section {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__line {
+    width: 65%;
+    border-bottom: 1px solid #535056;
+  }
+  &__link {
+    text-decoration: none;
+    color: #aeafb0;
+    font-size: 1vw;
+    font-family: @font_light;
+  }
+}
+
+.b-footer-section {
+  width: 80%;
+  padding: 1% 10% 1% 10%;
+  background-color: #2c2f2c;
+  text-align: center;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.5%;
+    font-family: @font_light;
+    font-size: 18px;
+    color: #d1d2d1;
+  }
+  &__mastercard {
+    display: inline-block;
+    height: 34px;
+    width: 50px;
+    background: url("../images/css_sprites.png") 0 0;
+  }
+  &__american-express {
+    display: inline-block;
+    height: 34px;
+    width: 50px;
+    background: url("../images/css_sprites.png") 50px 0;
+  }
+  &__visa {
+    display: inline-block;
+    height: 34px;
+    width: 50px;
+    background: url("../images/css_sprites.png") 100px 0;
+  }
+}
+
+.b-line-bottom {
+  padding: 0.5% 0 0.5% 0;
+  border-top: 1px solid #544f56;
+  background-color: #2c2f2c;
+  text-align: center;
+  &__text {
+    font-family: @font_light;
+    font-size: 13px;
+    color: #d1d2d1;
+  }
+}
+
+.js-responsive-btn {
+  display: none;
+  cursor: pointer;
+  background-color: @green;
+  padding: 1% 3% 1% 3%;
+  &:hover {
+    color: @white;
+    background-color: #000000;
+  }
+}
+
+.js-submenu-btn {
+  color: @white;
+  margin-left: 3%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+
+.b-tabs-content {
+  display: inline-block;
+  margin: 0 2.9% 2% 2.9%;
+  width: 8vw;
+  height: auto;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+  &__img {
+    display: inline-block;
+    width: 7vw;
+    height: 11vw;
+    border: 3px solid @white;
+    box-shadow: 0 0 10px 2px #cdcdcd;
+    border-radius: 3px;
+    margin-bottom: 8%;
+    cursor: pointer;
+    .b-tabs-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    font-size: 1.1vw;
+    font-family: @font_light;
+    color: #6e6e6e;
+    text-align: center;
+  }
+  &__value {
+    display: block;
+    font-family: @font_helvetica_roman;
+    font-size: 1.2vw;
+    color: #f26a6d;
+    font-weight: bold;
+  }
+  &__badge {
+    position: absolute;
+    right: -35%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    width: 4vw;
+    height: 4vw;
+    background-color: #f05356;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.3vw;
+    font-family: @font_bold;
+  }
+  &__badge-item {
+    display: block;
+    color: @white;
+    line-height: 2.2;
+  }
+  &__badge-text {
+    display: block;
+    color: @white;
+    font-family: @font_regular;
+    font-size: 1.1vw;
+    line-height: 0;
+  }
+}

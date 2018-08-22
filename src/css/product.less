@@ -1,0 +1,420 @@
+@font_light: segoe-wp-light, Arial, sans-serif;
+@font_regular: SegoeWPN, Arial, sans-serif;
+@font_bold: Segoe-bold, Arial, sans-serif;
+@font_helvetica_light: HelveticaLTStd-Light, Arial, sans-serif;
+@font_helvetica_roman: HelveticaLTStd-Roman, Arial, sans-serif;
+@font_helvetica_bold: HelveticaLTStd-Bold, Arial, sans-serif;
+@green: #79b260;
+@white: #ffffff;
+@gray: #6d6d6d;
+
+.vertical(@start-color; @end-color; @start-percent; @end-percent) {
+  background-image: -webkit-linear-gradient(bottom, @start-color @start-percent, @end-color @end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(bottom, @start-color @start-percent, @end-color @end-percent); // Opera 12
+  background-image: linear-gradient(to top, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+.js-responsive-btn {
+  display: none;
+  cursor: pointer;
+  background-color: @green;
+  padding: 1% 3% 1% 3%;
+  &:hover {
+    color: @white;
+    background-color: #000000;
+  }
+}
+
+.js-submenu-btn {
+  color: @white;
+  margin-left: 3%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+
+.b-line-nav {
+  width: 78%;
+  margin: 1% auto;
+  padding-left: 2%;
+  box-shadow: 0 0 3px 1px #cdcdcd;
+  border-radius: 5px;
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: @font_regular;
+    color: #acacac;
+  }
+}
+
+.b-main-content {
+  width: 74%;
+  padding: 3%;
+  border: 1px solid #dedede;
+  margin: 0 auto;
+  border-radius: 5px;
+  &__preview {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f05356;
+    width: 26%;
+    height: 29vw;
+    border: 1px solid #dedede;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__section {
+    vertical-align: top;
+    display: inline-block;
+    width: 70%;
+    height: auto;
+    margin-left: 3%;
+  }
+}
+
+.b-content-section {
+  width: 100%;
+  height: auto;
+  &__title {
+    display: inline-block;
+    font-size: 40px;
+    font-family: @font_light;
+    color: #595959;
+    margin-top: 0;
+  }
+  &__logo {
+    display: inline-block;
+    background-color: #d5d5d5;
+    border-radius: 100%;
+    padding: 17px;
+    position: relative;
+    float: right;
+  }
+  &__logo-text {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 46px;
+    padding: 1px 3px 1px 3px;
+    font-family: @font_bold;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: @white;
+    color: #929090;
+  }
+  &__text {
+    display: block;
+    text-align: justify;
+    margin: 0;
+    font-family: @font_regular;
+    font-size: 16px;
+    color: #7e7e7e;
+    word-spacing: 5px;
+  }
+}
+
+.b-section-cart {
+  width: 90%;
+  padding: 1% 5% 1% 5%;
+  border: 1px solid #dedede;
+  margin-top: 4%;
+  &__title {
+    font-size: 35px;
+    font-family: @font_regular;
+    color: #015699;
+
+  }
+  &__sub-title {
+    font-family: @font_regular;
+    font-size: 16px;
+    color: #939292;
+
+  }
+  &__btn {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+    font-family: @font_helvetica_bold;
+    text-decoration: none;
+    font-size: 24px;
+    color: @white;
+    background-color: @green;
+    border-radius: 5px;
+    padding: 3px 15px 3px 15px;
+    margin-top: 3%;
+  }
+  &_color_red {
+    color: #e45858;
+    font-family: @font_bold;
+  }
+}
+
+.b-section-line {
+  margin-top: 3%;
+  border-top: 1px solid #dedede;
+  padding: 2%;
+  &__title {
+    font-family: @font_helvetica_roman;
+    font-size: 13px;
+    color: #7f7f7f;
+  }
+  &__sprite-paypal {
+    text-decoration: none;
+    display: inline-block;
+    background: url("../images/css_sprites_payment.png") 0 0;
+    height: 25px;
+    width: 40px;
+  }
+  &__sprite-mastercard {
+    text-decoration: none;
+    display: inline-block;
+    background: url("../images/css_sprites_payment.png") -40px 0;
+    height: 25px;
+    width: 40px;
+  }
+  &__sprite-visa {
+    text-decoration: none;
+    display: inline-block;
+    background: url("../images/css_sprites_payment.png") 40px 0;
+    height: 25px;
+    width: 40px;
+  }
+  &__sprite-american-express {
+    text-decoration: none;
+    display: inline-block;
+    background: url("../images/css_sprites_payment.png") 80px 0;
+    height: 25px;
+    width: 40px;
+  }
+}
+
+.b-middle-container__section {
+  width: 80%;
+  margin: 1% auto;
+}
+
+.b-left-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+  height: auto;
+}
+
+.b-tabs-section {
+  width: 100%;
+  height: auto;
+  &__buttons {
+    display: inline-block;
+    padding: 5px 5% 5px 5%;
+    background-color: #c2c2c2;
+    font-family: @font_regular;
+    font-size: 18px;
+    color: @white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #dedede;
+    margin: 0 10px -1px 0;
+    vertical-align: bottom;
+    cursor: pointer;
+  }
+  &__content {
+    width: 90%;
+    height: auto;
+    background-color: #fcfcfc;
+    border: 1px solid #dedede;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 2% 5% 2% 5%;
+    display: none;
+  }
+  &__text {
+    font-size: 14px;
+    font-family: @font_regular;
+    color: #bababa;
+    letter-spacing: 0.3px;
+  }
+  &_current {
+    background-color: #fcfcfc;
+    color: #7e7e7e;
+    border-bottom-color: #fcfcfc;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  &_active {
+    display: block;
+  }
+}
+
+.b-section-review {
+  padding: 1% 5% 1% 5%;
+  width: 90%;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin-top: 1%;
+  background-color: #fcfcfc;
+  &__line {
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+  }
+  &__container {
+    display: inline-block;
+    width: 9%;
+    height: auto;
+    vertical-align: top;
+  }
+  &__title {
+    font-family: @font_regular;
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-top: 0;
+    font-weight: normal;
+  }
+  &__logo {
+    width: 100%;
+    height: 4.5vw;
+    vertical-align: top;
+    display: block;
+    text-align: center;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__logo-title {
+    display: block;
+    text-align: center;
+    margin: 5% 0 0 0;
+    font-family: @font_regular;
+    font-size: 12px;
+    color: #a0a0a0;
+  }
+  &__content {
+    display: inline-block;
+    vertical-align: top;
+    width: 85%;
+    height: auto;
+    margin-left: 4%;
+    font-family: @font_regular;
+    font-size: 13px;
+    color: #a0a0a0;
+  }
+  &_border-bottom_none {
+    border-bottom: none;
+  }
+  &_padding {
+    padding: 0 5% 0 5%;
+  }
+}
+
+.b-form-comment {
+  margin-top: 3%;
+  width: 100%;
+  height: auto;
+  text-align: right;
+  &__title {
+    float: left;
+    display: block;
+    vertical-align: middle;
+    width: 15%;
+    margin-bottom: 3%;
+    margin-right: 5%;
+    font-family: @font_regular;
+    font-size: 13px;
+    color: #a2a2a2;
+  }
+  &__input {
+    display: block;
+    vertical-align: middle;
+    width: 75%;
+    margin-bottom: 3%;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 1%;
+  }
+  &__text-area {
+    display: block;
+    width: 75%;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 1%;
+  }
+  &__button {
+    margin: 3%;
+    padding: 1% 15px 1% 15px;
+    font-family: @font_helvetica_bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: @green;
+    color: @white;
+  }
+}
+
+.b-right-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 28%;
+  padding: 1% 0 0 0;
+  float: right;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  &__content {
+    margin-bottom: 2%;
+    padding: 5%;
+    border-bottom: 1px solid #dedede;
+  }
+  &__preview {
+    display: inline-block;
+    width: 16%;
+    height: 5vw;
+    box-shadow: 0 0 7px 2px #cdcdcd;
+    vertical-align: top;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__text {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+    width: 70%;
+  }
+  &__title {
+    display: block;
+    font-family: @font_light;
+    color: #595959;
+    font-size: 1.3vw;
+  }
+  &__value {
+    display: block;
+    font-family: @font_helvetica_roman;
+    color: #f26a6d;
+    font-weight: bold;
+    margin-top: 1%;
+    font-size: 1.3vw;
+  }
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    font-family: @font_regular;
+    color: @white;
+    padding: 1% 5px 1% 5px;
+    background-color: #595959;
+    border-radius: 5px;
+    margin-top: 1%;
+    font-size: 1.2vw;
+  }
+  &_border-none {
+    border: none;
+  }
+}

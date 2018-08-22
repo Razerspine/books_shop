@@ -1,0 +1,29 @@
+{
+  "name": "books_online",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./Books_online"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/spine_p/Books_online.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/spine_p/Books_online/issues"
+  },
+  "homepage": "https://gitlab.com/spine_p/Books_online#README",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-newer": "^1.4.0"
+  }
+}

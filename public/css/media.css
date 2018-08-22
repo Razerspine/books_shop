@@ -1,0 +1,15 @@
+@media screen and (max-width: 1270px) {
+  .b-page {
+    background-color: #46b8da;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .b-page {
+    background-color: #79b260;
+  }
+}
+@media screen and (max-width: 768px) {
+  .b-page {
+    background-color: #ec971f;
+  }
+}

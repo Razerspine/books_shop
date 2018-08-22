@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/all_style.css" type="text/css" rel="stylesheet">
+    <link href="css/media.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/test.js"></script>
+    <title>Books Online</title>
+</head>
+<body class="b-page">
+<div class="b-page__header">
+    <div class="b-header">
+        <div class="b-header__top-line">
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">Sign in</a>
+            </div>
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">My Account</a>
+            </div>
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">Order Status</a>
+            </div>
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">Help</a>
+            </div>
+        </div>
+        <div class="b-header__nav-main">
+            <div class="b-nav-main">
+                <div class="b-nav-main__logo">
+                    <img class="b-nav-main__img" src="images/page_logo.png" alt="book logo">
+                </div>
+                <div class="b-nav-main__search">
+                    <form class="b-search-form" name="search" method="get" action="#">
+                        <label>
+                            <input class="b-search-form__input" type="text" name="search">
+                        </label>
+                        <button class="b-search-form__button" type="submit" name="send">
+                            <i class="fas fa-search"></i>Search
+                        </button>
+                    </form>
+                </div>
+                <div class="b-nav-main__aside-section">
+                    <div class="b-left-section">
+                        <div class="b-left-section__content">
+                            <span class="b-left-section__title">
+                                <i class="fas fa-shopping-cart b-left-section__icon"></i> Your cart
+                            </span>
+                            <div class="js-tooltip">
+                                <div class="b-overlay"></div>
+                                <span class="js-tooltip__title">Selected item</span>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item" href="#">The war of Art</a>
+                                    <form class="js-tooltip__quantity" method="post" action="#" name="quantity">
+                                        <label>
+                                            <input class="js-tooltip__input-minus" type="button" value="&#706;">
+                                        </label>
+                                        <label>
+                                            <input class="js-tooltip__input" type="text" value="1">
+                                        </label>
+                                        <label>
+                                            <input class="js-tooltip__input-plus" type="button" value="&#707;">
+                                        </label>
+                                    </form>
+                                    <span class="js-tooltip__badge">&#215;</span>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item" href="#">The war of Art</a>
+                                    <form class="js-tooltip__quantity" method="post" action="#" name="quantity">
+                                        <label>
+                                            <input class="js-tooltip__input-minus" type="button" value="&#706;">
+                                        </label>
+                                        <label>
+                                            <input class="js-tooltip__input" type="text" value="1">
+                                        </label>
+                                        <label>
+                                            <input class="js-tooltip__input-plus" type="button" value="&#707;">
+                                        </label>
+                                    </form>
+                                    <span class="js-tooltip__badge">&#215;</span>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__total">
+                                    <span class="js-tooltip__total-title">Total:</span>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">100</span>
+                                </div>
+                            </div>
+                            <span class="b-left-section__item">(2 items)</span>
+                        </div>
+                        <div class="b-left-section__content">
+                            <span class="b-left-section__value">$</span><span class="b-left-section__value">125.0</span>
+                            <a class="b-left-section__button" href="#">Checkout</a>
+                        </div>
+                    </div>
+                    <div class="b-right-section">
+                        <div class="b-right-section__content">
+                            <i class="fas fa-star b-right-section__icon"></i>
+                            <div class="b-right-section__title">Wish list
+                                <div class="b-right-section__badge">20</div>
+                            </div>
+                            <div class="js-tooltip-wish">
+                                <div class="b-overlay"></div>
+                                <span class="js-tooltip__title">Wish List</span>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">The war of Art</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">The Immortals of Meluha</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">Life Is What You Make It</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">The Hare With Amber Eyes</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-page__content">
+    <div class="b-nav-menu">
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Computers</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Cooking</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item b-nav-menu_current-style">
+            <a href="categories.html" class="b-nav-menu__link b-nav-menu_current-style">Education</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Fiction</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Health</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Mathematics</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Medical</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Reference</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Science</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="js-responsive-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="b-line-nav">
+        <a href="#" class="b-line-nav__link">Home &#187;</a>
+        <a href="#" class="b-line-nav__link">Discounts and Clearance &#187;</a>
+        <a href="#" class="b-line-nav__link">Sonatini Hippeastrum Alaska</a>
+    </div>
+    <div class="b-middle-container">
+        <div class="b-main-content">
+            <div class="b-main-content__preview">
+                <img class="b-main-content__img" src="images/product.png" alt="star wars">
+            </div>
+            <div class="b-main-content__section">
+                <div class="b-content-section">
+                    <h1 class="b-content-section__title">Star Wars Episode I</h1>
+                    <span class="b-content-section__logo">
+                    <span class="b-content-section__logo-text">IN STOCK</span>
+                </span>
+                    <p class="b-content-section__text">
+                        The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and
+                        published on
+                        April 21, 1999 by Del Rey. It is based on the script of the movie of the same name. Narration
+                        for the
+                        abridged audio version was performed by Michael Cumpsty. The unabridged version was performed by
+                        Alexander Adams. On January 31, 2012, a new paperback edition
+                    </p>
+                    <div class="b-section-cart">
+                        <span class="b-section-cart__title">Our price:</span>
+                        <span class="b-section-cart__title b-section-cart_color_red">$150</span>
+                        <a class="b-section-cart__btn" href="#">Add to cart</a>
+                        <div class="b-section-cart__sub-title">Was $ 200 Save 20%</div>
+                        <div class="b-section-line">
+                            <div class="b-section-line__title">
+                                <i class="fas fa-lock"></i>
+                                Safe, Secure Shopping
+                            </div>
+                            <a class="b-section-line__sprite-paypal" href="#"></a>
+                            <a class="b-section-line__sprite-mastercard" href="#"></a>
+                            <a class="b-section-line__sprite-visa" href="#"></a>
+                            <a class="b-section-line__sprite-american-express" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-middle-container__section">
+            <div class="b-left-container">
+                <div class="b-tabs-section">
+                    <div class="b-tabs-section__buttons b-tabs-section_current" data-info="tab1">
+                        Product Information
+                    </div>
+                    <div class="b-tabs-section__buttons" data-info="tab2">Other details</div>
+                    <div class="b-tabs-section__content b-tabs-section_active" id="tab1">
+                        <div class="b-tabs-section__text">
+                            The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and
+                            published on April 21, 1999 by Del Rey. It is based on the script of the movie of the same
+                            name. Narration for the abridged audio version was performed by Michael Cumpsty. The
+                            unabridged version was performed by Alexander Adams. On January 31, 2012, a new paperback
+                            edition was
+                        </div>
+                    </div>
+                    <div class="b-tabs-section__content" id="tab2">
+                        <div class="b-tabs-section__text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially
+                        </div>
+                    </div>
+                </div>
+                <div class="b-section-review">
+                    <h2 class="b-section-review__title">Product review</h2>
+                    <div class="b-section-review__line">
+                        <div class="b-section-review__container">
+                            <div class="b-section-review__logo">
+                                <img src="images/user_logo/user_logo.png" class="b-section-review__img" alt="user logo">
+                            </div>
+                            <h4 class="b-section-review__logo-title">Name 1</h4>
+                        </div>
+                        <div class="b-section-review__content">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially
+                        </div>
+                    </div>
+                    <div class="b-section-review__line b-section-review_border-bottom_none">
+                        <div class="b-section-review__container">
+                            <div class="b-section-review__logo">
+                                <img src="images/user_logo/user_logo.png" class="b-section-review__img" alt="user logo">
+                            </div>
+                            <h4 class="b-section-review__logo-title">Name 2</h4>
+                        </div>
+                        <div class="b-section-review__content">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially
+                        </div>
+                    </div>
+                    <div class="b-section-comment">
+                        <h2 class="b-section-review__title">Write a comment</h2>
+                        <form class="b-form-comment" method="get" action="#" name="comment">
+                            <label>
+                                <span class="b-form-comment__title">Your name</span>
+                                <input class="b-form-comment__input" type="text" name="name">
+                            </label>
+                            <label>
+                                <span class="b-form-comment__title">email</span>
+                                <input class="b-form-comment__input" type="text" name="email">
+                            </label>
+                            <label>
+                                <span class="b-form-comment__title">Message</span>
+                                <textarea class="b-form-comment__text-area" name="message" rows="8"></textarea>
+                            </label>
+                            <label>
+                                <button class="b-form-comment__button" type="submit" name="send">
+                                    Submit
+                                </button>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="b-right-container">
+                <h2 class="b-section-review__title b-section-review_padding">You may also like</h2>
+                <div class="b-right-container__content">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="b-right-container__content">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="b-right-container__content">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="b-right-container__content">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="b-right-container__content">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="b-right-container__content">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="b-right-container__content b-right-container_border-none">
+                    <div class="b-right-container__preview">
+                        <img class="b-right-container__img" src="images/books/books_1.png" alt="book">
+                    </div>
+                    <div class="b-right-container__text">
+                        <span class="b-right-container__title">The Hare With Amber</span>
+                        <span class="b-right-container__value">$50</span>
+                        <a class="b-right-container__link" href="#">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-page__footer">
+    <div class="b-footer">
+        <div class="b-footer__item">
+            <h2 class="b-footer__title">Biography & True Stories</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#"> General</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Diaries, Letters & Journals</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Memoirs</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">True Stories</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Generic Exams</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">GK Titles</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Medical Entrance</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Other Entrance Exams</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">PG Entrance Examinations</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Self-help Titles</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Sociology</a>
+                </li>
+            </ul>
+        </div>
+        <div class="b-footer__item">
+            <h2 class="b-footer__title">Professional & Reference</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Academic and Reference</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Business Trade</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Engineering and Computer Science</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Humanities, Social Sciences and Languages</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Introduction to Computers</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Science and Maths</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Trade Business</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">English Language & Literature</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">English Language Teaching</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Environment Awareness</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Environment Protection</a>
+                </li>
+            </ul>
+        </div>
+        <div class="b-footer__item">
+            <h2 class="b-footer__title">Earth Sciences</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Earth Sciences</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Geography</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">The Environment</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Regional & Area Planning</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Fantasy</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Gay</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Humorous</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Interactive</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Legal</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Lesbian</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Men'S Adventure</a>
+                </li>
+            </ul>
+        </div>
+        <div class="b-footer__item b-footer_margin-right">
+            <h2 class="b-footer__title">Mathematics</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Algebra</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Differential Equations</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Discrete Mathematics</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Fourier Analysis</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Numerical Analysis</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Probability</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Statistical Methods/data Analysis</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Stochastic And Random Processes</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Topology</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Statistics</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Mathematics</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="b-footer-section">
+        <h2 class="b-footer-section__title">We accept all major Credit Card/Debit Card/Internet Banking</h2>
+        <a href="#" class="b-footer-section__mastercard"></a>
+        <a href="#" class="b-footer-section__american-express"></a>
+        <a href="#" class="b-footer-section__visa"></a>
+    </div>
+    <div class="b-line-bottom">
+        <span class="b-line-bottom__text">
+           Conditions of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its affiliates
+        </span>
+    </div>
+</div>
+</body>
+</html>

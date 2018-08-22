@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/all_style.css" type="text/css" rel="stylesheet">
+    <link href="css/media.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/test.js"></script>
+    <title>Books Online</title>
+</head>
+<body class="b-page">
+<div class="b-page__header">
+    <div class="b-header">
+        <div class="b-header__top-line">
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">Sign in</a>
+            </div>
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">My Account</a>
+            </div>
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">Order Status</a>
+            </div>
+            <div class="b-header__nav-item">
+                <a href="#" class="b-header__nav-link">Help</a>
+            </div>
+        </div>
+        <div class="b-header__nav-main">
+            <div class="b-nav-main">
+                <div class="b-nav-main__logo">
+                    <img class="b-nav-main__img" src="images/page_logo.png" alt="book logo">
+                </div>
+                <div class="b-nav-main__search">
+                    <form class="b-search-form" name="search" method="get" action="#">
+                        <label>
+                            <input class="b-search-form__input" type="text" name="search">
+                        </label>
+                        <button class="b-search-form__button" type="submit" name="send">
+                            <i class="fas fa-search"></i>Search
+                        </button>
+                    </form>
+                </div>
+                <div class="b-nav-main__aside-section">
+                    <div class="b-left-section">
+                        <div class="b-left-section__content">
+                            <span class="b-left-section__title">
+                                <i class="fas fa-shopping-cart b-left-section__icon"></i> Your cart
+                            </span>
+                                <div class="js-tooltip">
+                                    <div class="b-overlay"></div>
+                                    <span class="js-tooltip__title">Selected item</span>
+                                    <div class="js-tooltip__section-item js-section-1">
+                                        <a class="js-tooltip__item" href="#">The war of Art</a>
+                                        <form class="js-tooltip__quantity" method="post" action="#" name="quantity">
+                                            <label>
+                                                <input class="js-tooltip__input-minus" type="button" value="&#706;">
+                                            </label>
+                                            <label>
+                                                <input class="js-tooltip__input" data-attr="TheWarOfArt" type="hidden" value="">
+                                            </label>
+                                            <labeL>
+                                                <input class="js-tooltip__count" type="text" value="1">
+                                            </labeL>
+                                            <label>
+                                                <input class="js-tooltip__input-plus" type="button" value="&#707;">
+                                            </label>
+                                        </form>
+                                        <span class="js-tooltip__badge">&#215;</span>
+                                        <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                        <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                    </div>
+                                    <div class="js-tooltip__section-item js-section-2">
+                                        <a class="js-tooltip__item" href="#">The war of Art</a>
+                                        <form class="js-tooltip__quantity" method="post" action="#" name="quantity">
+                                            <label>
+                                                <input class="js-tooltip__input-minus"  type="button" value="&#706;">
+                                            </label>
+                                            <label>
+                                                <input class="js-tooltip__input" type="hidden" value="">
+                                            </label>
+                                            <labeL>
+                                                <input class="js-tooltip__count" data-attr="TheWarOfArt" type="text" value="1">
+                                            </labeL>
+                                            <label>
+                                                <input class="js-tooltip__input-plus" type="button" value="&#707;">
+                                            </label>
+                                        </form>
+                                        <span class="js-tooltip__badge">&#215;</span>
+                                        <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                        <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                    </div>
+                                    <div class="js-tooltip__total">
+                                        <span class="js-tooltip__total-title">Total:</span>
+                                        <span class="js-tooltip__cy">$</span><span class="js-tooltip__total-value">100</span>
+                                    </div>
+                                </div>
+                            <span class="b-left-section__item">(2 items)</span>
+                        </div>
+                        <div class="b-left-section__content">
+                            <span class="b-left-section__value">$</span><span class="b-left-section__value">125.0</span>
+                            <a class="b-left-section__button" href="#">Checkout</a>
+                        </div>
+                    </div>
+                    <div class="b-right-section">
+                        <div class="b-right-section__content">
+                            <i class="fas fa-star b-right-section__icon"></i>
+                            <div class="b-right-section__title">Wish list
+                                <div class="b-right-section__badge">20</div>
+                            </div>
+                            <div class="js-tooltip-wish">
+                                <div class="b-overlay"></div>
+                                <span class="js-tooltip__title">Wish List</span>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">The war of Art</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">The Immortals of Meluha</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">Life Is What You Make It</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                                <div class="js-tooltip__section-item">
+                                    <a class="js-tooltip__item js-tooltip-wish_width" href="#">The Hare With Amber Eyes</a>
+                                    <span class="js-tooltip__cy">$</span><span class="js-tooltip__value">50</span>
+                                    <span class="js-tooltip__remove" title="remove item">&#215;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-page__content">
+    <div class="b-nav-menu">
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Computers</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Cooking</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item b-nav-menu_current-style">
+            <a href="categories.html" class="b-nav-menu__link b-nav-menu_current-style">Education</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Fiction</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Health</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Mathematics</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Medical</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Reference</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="b-nav-menu__item">
+            <a href="categories.html" class="b-nav-menu__link">Science</a>
+            <div class="js-submenu-btn">
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="b-nav-menu__sub-menu">
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+                <a href="#" class="b-nav-menu__sub-link">Subcategory</a>
+            </div>
+        </div>
+        <div class="js-responsive-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="b-middle-section">
+        <div class="b-middle-section__slider">
+            <div class="b-slide js-active-slide">
+                <img class="b-slide__img" src="./images/banner.png" alt="banner">
+                <div class="b-slide__content">
+                    <h3 class="b-slide__title">A Wanted Man</h3>
+                    <h4 class="b-slide__text">(Jack Reacher #17)</h4>
+                    <h5 class="b-slide__title b-slide_font-size_small">By Lee Child</h5>
+                </div>
+            </div>
+            <div class="b-slide">
+                <img class="b-slide__img" src="images/banner_2.png" alt="banner">
+                <div class="b-slide__content">
+                    <h3 class="b-slide__title">A Wanted</h3>
+                    <h4 class="b-slide__text">(Jack Reacher #17)</h4>
+                    <h5 class="b-slide__title b-slide_font-size_small">By Lee Child</h5>
+                </div>
+            </div>
+            <div class="b-slide">
+                <img class="b-slide__img" src="images/banner_3.png" alt="banner">
+                <div class="b-slide__content">
+                    <h3 class="b-slide__title">A Wanted Man</h3>
+                    <h4 class="b-slide__text">(Jack Reacher #17)</h4>
+                    <h5 class="b-slide__title b-slide_font-size_small">By Lee Child</h5>
+                </div>
+            </div>
+            <div class="b-slide">
+                <img class="b-slide__img" src="images/banner_4.png" alt="banner">
+                <div class="b-slide__content">
+                    <h3 class="b-slide__title">A Wanted Man</h3>
+                    <h4 class="b-slide__text">(Jack Reacher #17)</h4>
+                    <h5 class="b-slide__title b-slide_font-size_small">By Lee Child</h5>
+                </div>
+            </div>
+            <div class="b-slide">
+                <img class="b-slide__img" src="images/banner_5.png" alt="banner">
+                <div class="b-slide__content">
+                    <h3 class="b-slide__title">A Wanted Man</h3>
+                    <h4 class="b-slide__text">(Jack Reacher #17)</h4>
+                    <h5 class="b-slide__title b-slide_font-size_small">By Lee Child</h5>
+                </div>
+            </div>
+            <div class="b-slider-button">
+                <div class="b-slider-button__prev">
+                    <i class="fas fa-angle-left b-slider-button__icon"></i>
+                </div>
+                <div class="b-slider-button__next">
+                    <i class="fas fa-angle-right b-slider-button__icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="b-middle-section__aside-right">
+            <div class="b-right-aside">
+                <h3 class="b-right-aside__title">Deal of the Month</h3>
+                <h4 class="b-right-aside__sub-title">The Human Face of Big Data</h4>
+                <h4 class="b-right-aside__sub-title b-right-aside_pos-bottom">Save 45% Today</h4>
+                <h4 class="b-right-aside__value">$27.50</h4>
+                <a class="b-right-aside__button" href="#">Buy now</a>
+            </div>
+        </div>
+    </div>
+    <div class="b-content">
+        <div class="b-content__aside-left">
+            <div class="b-left-menu">
+                <h3 class="b-left-menu__title">Categories</h3>
+                <div class="b-left-menu__line">ALL</div>
+                <div class="b-accordion">
+                    <div class="b-accordion__button js-button">Fiction & Literature</div>
+                    <ul class="b-accordion__content b-accordion_js-active">
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Children</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Science Fiction</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Fantasy</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Mystery</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Romance</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Horror</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Poetry</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Literature</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Crime</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-accordion">
+                    <div class="b-accordion__button js-button">Non - Fiction</div>
+                    <ul class="b-accordion__content">
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Comic</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Cook</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Psychology</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Medical</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Art</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Photography</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Law</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">History</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Business</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Computer</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-accordion">
+                    <div class="b-accordion__button js-button">Other</div>
+                    <ul class="b-accordion__content">
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Baby</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Sex</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Travel</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Science</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Romance</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                        <li class="b-accordion__item">
+                            <a class="b-accordion__link" href="#">Sports</a>
+                            <div class="b-accordion__bottom-line"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="b-content__main b-content_border_none">
+            <div class="b-main-tabs">
+                <div class="b-main-tabs__header js-tab-button" data-tab="tab1">Best sellers</div>
+                <div class="b-main-tabs__header" data-tab="tab2">New Arrivals</div>
+                <div class="b-main-tabs__header" data-tab="tab3">Used Books</div>
+                <div class="b-main-tabs__header" data-tab="tab4">Special Offers</div>
+            </div>
+            <div class="b-container-tabs">
+                <!--TAB CONTENT-->
+                <div class="b-main-tabs__content js-active" id="tab1">
+                    <div class="cssload-container">
+                        <div class="cssload-speeding-wheel"></div>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_1.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$50</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_2.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$60</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_3.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$25</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_4.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$80</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_5.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_6.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_7.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$150</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_8.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$100</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_9.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$152</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_10.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_11.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$220</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_12.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$10</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_13.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$22</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_14.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$300</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_15.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$205</span>
+                    </div>
+                </div>
+                <div class="b-main-tabs__content" id="tab2">
+                    <div class="cssload-container">
+                        <div class="cssload-speeding-wheel"></div>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_1.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$50</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_2.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$60</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_3.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$25</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_4.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$80</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_5.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_6.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_7.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$150</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_8.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$100</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_9.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$152</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_10.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_11.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$220</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_12.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$10</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_13.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$22</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_14.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$300</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_15.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$205</span>
+                    </div>
+                </div>
+                <div class="b-main-tabs__content" id="tab3">
+                    <div class="cssload-container">
+                        <div class="cssload-speeding-wheel"></div>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_1.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$50</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_2.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$60</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_3.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$25</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_4.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$80</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_5.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_6.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_7.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$150</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_8.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$100</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_9.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$152</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_10.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_11.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$220</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_12.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$10</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_13.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$22</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_14.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$300</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_15.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$205</span>
+                    </div>
+                </div>
+                <div class="b-main-tabs__content" id="tab4">
+                    <div class="cssload-container">
+                        <div class="cssload-speeding-wheel"></div>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_1.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$50</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_2.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$60</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_3.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$25</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_4.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$80</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_5.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_6.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_7.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$150</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_8.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$100</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_9.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$152</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_10.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$200</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_11.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$220</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_12.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The war of Art</div>
+                        <span class="b-tabs-content__value">$10</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_13.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Hare With Amber Eyes</div>
+                        <span class="b-tabs-content__value">$22</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__badge">
+                            <span class="b-tabs-content__badge-item">30%</span>
+                            <span class="b-tabs-content__badge-text">off</span>
+                        </div>
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_14.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">The Immortals of Meluha</div>
+                        <span class="b-tabs-content__value">$300</span>
+                    </div>
+                    <div class="b-tabs-content">
+                        <div class="b-tabs-content__img">
+                            <img class="b-tabs-img" src="images/books/books_15.png" alt="book">
+                        </div>
+                        <div class="b-tabs-content__title">Life Is What You Make It</div>
+                        <span class="b-tabs-content__value">$205</span>
+                    </div>
+                </div>
+                <!--END TAB CONTENT-->
+                <ul class="b-tabs-pager">
+                    <li class="b-tabs-pager__item" data-page="page=1">
+                        <a class="b-tabs-pager__link" href="#">1</a>
+                    </li>
+                    <li class="b-tabs-pager__item" data-page="page=2">
+                        <a class="b-tabs-pager__link" href="#">2</a>
+                    </li>
+                    <li class="b-tabs-pager__item b-tabs-pager_current" data-page="page=3">
+                        <a class="b-tabs-pager__link" href="#">3</a>
+                    </li>
+                    <li class="b-tabs-pager__item" data-page="page=4">
+                        <a class="b-tabs-pager__link" href="#">4</a>
+                    </li>
+                    <li class="b-tabs-pager__item" data-page="page=5">
+                        <a class="b-tabs-pager__link" href="#">5</a>
+                    </li>
+                    <li class="b-tabs-pager__item" data-page="page=6">
+                        <a class="b-tabs-pager__link" href="#">6</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-page__footer">
+    <div class="b-footer">
+        <div class="b-footer__item">
+            <h2 class="b-footer__title">Biography & True Stories</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#"> General</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Diaries, Letters & Journals</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Memoirs</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">True Stories</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Generic Exams</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">GK Titles</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Medical Entrance</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Other Entrance Exams</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">PG Entrance Examinations</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Self-help Titles</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Sociology</a>
+                </li>
+            </ul>
+        </div>
+        <div class="b-footer__item">
+            <h2 class="b-footer__title">Professional & Reference</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Academic and Reference</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Business Trade</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Engineering and Computer Science</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Humanities, Social Sciences and Languages</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Introduction to Computers</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Science and Maths</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Trade Business</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">English Language & Literature</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">English Language Teaching</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Environment Awareness</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Environment Protection</a>
+                </li>
+            </ul>
+        </div>
+        <div class="b-footer__item">
+            <h2 class="b-footer__title">Earth Sciences</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Earth Sciences</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Geography</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">The Environment</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Regional & Area Planning</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Fantasy</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Gay</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Humorous</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Interactive</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Legal</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Lesbian</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Men'S Adventure</a>
+                </li>
+            </ul>
+        </div>
+        <div class="b-footer__item b-footer_margin-right">
+            <h2 class="b-footer__title">Mathematics</h2>
+            <ul class="b-footer__section">
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Algebra</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Differential Equations</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Discrete Mathematics</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Fourier Analysis</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Numerical Analysis</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Probability</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Statistical Methods/data Analysis</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Stochastic And Random Processes</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Topology</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content">
+                    <a class="b-footer__link" href="#">Statistics</a>
+                    <div class="b-footer__line"></div>
+                </li>
+                <li class="b-footer__content b-footer_border-none">
+                    <a class="b-footer__link" href="#">Mathematics</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="b-footer-section">
+        <h2 class="b-footer-section__title">We accept all major Credit Card/Debit Card/Internet Banking</h2>
+        <a href="#" class="b-footer-section__mastercard"></a>
+        <a href="#" class="b-footer-section__american-express"></a>
+        <a href="#" class="b-footer-section__visa"></a>
+    </div>
+    <div class="b-line-bottom">
+        <span class="b-line-bottom__text">
+           Conditions of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its affiliates
+        </span>
+    </div>
+</div>
+</body>
+</html>
