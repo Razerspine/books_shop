@@ -20,16 +20,18 @@
   &__slider {
     display: inline-block;
     width: 67%;
-    height: 22vw;
+    height: 280px;
     margin-right: 2%;
     position: relative;
     overflow: hidden;
+    vertical-align: top;
 
   }
   &__aside-right {
     display: inline-block;
-    width: 30%;
-    height: 22vw;
+    width: auto;
+    height: auto;
+    vertical-align: top;
   }
 }
 
@@ -111,69 +113,66 @@
 }
 
 .b-right-aside {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/sale_banner.png");
-  background-size: 90%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #555555;
+  width: 280px;
+  height: 280px;
   position: relative;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
   &__title {
+    width: 100%;
     position: absolute;
     margin: 0;
-    top: 8%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    font-size: 1.4vw;
+    font-size: 17px;
     color: @white;
     font-family: @font_bold;
-    width: 60%;
+    text-align: center;
   }
   &__sub-title {
+    width: 100%;
     position: absolute;
-    margin: 0;
-    top: 15%;
-    left: 54.5%;
-    transform: translate(-50%, -50%);
-    font-size: 1vw;
+    margin: 25px 0 0 0;
+    font-size: 15px;
     color: #d4d4d4;
     font-family: @font_light;
-    width: 60%;
+    text-align: center;
   }
   &__value {
+    width: 100%;
     position: absolute;
+    bottom: 15%;
     margin: 0;
-    top: 80%;
-    left: 66%;
-    transform: translate(-50%, -50%);
-    font-size: 2vw;
+    font-size: 20px;
+    text-align: center;
     color: @white;
     font-family: @font_bold;
-    width: 60%;
   }
   &__button {
     position: absolute;
-    bottom: -2%;
+    bottom: 3%;
     left: 50%;
-    width: 40%;
+    transform: translate(-50%, 0);
+    width: 120px;
+    height: 30px;
+    text-align: center;
     background-color: #5ebc5e;
     border: none;
-    font-size: 1.5vw;
+    font-size: 16px;
+    line-height: 30px;
     color: @white;
     font-family: @font_bold;
     border-radius: 10px;
-    transform: translate(-50%, -50%);
-    line-height: 1.2;
-    padding-bottom: 1.5%;
     text-decoration: none;
     display: block;
-    text-align: center;
   }
   &_pos-bottom {
-    font-size: 1.5vw;
-    top: 72%;
-    left: 60%;
+    width: 100%;
+    bottom: 25%;
+    font-size: 17px;
   }
 }
 

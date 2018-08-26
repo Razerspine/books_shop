@@ -119,33 +119,50 @@ $(document).ready(function () {
 
     (function () {
 
-        var btnPlus = $(".js-section-1 .js-tooltip__input-plus");
-        var btnMinus = $(".js-section-1 .js-tooltip__input-minus");
-        var btnRemove = $(".js-section-1 .js-tooltip__remove");
-        var countValue = $(".js-section-1 .js-tooltip__count");
+        var btnPlus = $(".js-tooltip__input-plus");
+        var btnMinus = $(".js-tooltip__input-minus");
+        var btnRemove = $(".js-tooltip__remove");
         var minValue = 1;
         var maxValue = 10;
 
-        $(btnPlus).click(function(){
+        $(".js-tooltip__count").keyup(function() {
 
-            $(countValue).val(parseInt(countValue.val()) + 1 );
+            var enterValue = $(this).val();
+            var currentValue = $(this).parents(".js-tooltip__section-item").find(".js-itemData");
+            currentValue.val(enterValue);
+        });
 
-            if (parseInt(countValue.val()) >= maxValue) {
-                return countValue.val(maxValue);
+        $(btnPlus).on( "click", function() {
+
+            var countValue = $(this).parents(".js-tooltip__section-item").find(".js-tooltip__count");
+            var currentValue = $(this).parents(".js-tooltip__section-item").find(".js-itemData");
+            console.log(currentValue);
+            var value = countValue.val();
+
+            if (value < maxValue) {
+                var newValue = countValue.val( +value + 1 );
+
+                currentValue.val(newValue[0].value);
             }
         });
 
-        $(btnMinus).click(function(){
+        $(btnMinus).on( "click", function() {
 
-            $(countValue).val(parseInt(countValue.val()) - 1 );
+            var countValue = $(this).parents(".js-tooltip__section-item").find(".js-tooltip__count");
+            var currentValue = $(this).parents(".js-tooltip__section-item").find(".js-itemData");
+            var value = countValue.val();
 
-            if (parseInt(countValue.val()) <= minValue) {
-                 return countValue.val(minValue);
+            if (value > minValue) {
+                var newValue = countValue.val( +value - 1 );
+
+                currentValue.val(newValue[0].value);
             }
         });
 
-        $(btnRemove).click(function () {
-            $(".js-section-1").remove();
+        $(btnRemove).on("click", function () {
+
+            var currentElem = $(this).parents(".js-tooltip__section-item");
+            currentElem.remove();
         });
     })();
 });
