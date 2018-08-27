@@ -10,6 +10,8 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/test.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/form_validate.js"></script>
     <title>Books Online</title>
 </head>
 <body class="b-page">
@@ -261,7 +263,7 @@
         <a href="#" class="b-line-nav__link">Sonatini Hippeastrum Alaska</a>
     </div>
     <div class="b-middle-container">
-        <div class="b-main-content">
+        <div class="b-main-content js-product" data-name="StarWarsEpisodeI">
             <div class="b-main-content__preview">
                 <img class="b-main-content__img" src="images/product.png" alt="star wars">
             </div>
@@ -281,7 +283,7 @@
                     </p>
                     <div class="b-section-cart">
                         <span class="b-section-cart__title">Our price:</span>
-                        <span class="b-section-cart__title b-section-cart_color_red">$150</span>
+                        <span class="b-section-cart__title b-section-cart_color_red js-product-price">$150</span>
                         <a class="b-section-cart__btn" href="#">Add to cart</a>
                         <div class="b-section-cart__sub-title">Was $ 200 Save 20%</div>
                         <div class="b-section-line">
@@ -355,7 +357,7 @@
                     </div>
                     <div class="b-section-comment">
                         <h2 class="b-section-review__title">Write a comment</h2>
-                        <form class="b-form-comment" method="get" action="#" name="comment">
+                        <form class="b-form-comment" method="post" action="#" name="comment">
                             <label>
                                 <span class="b-form-comment__title">Your name</span>
                                 <input class="b-form-comment__input" type="text" name="name">

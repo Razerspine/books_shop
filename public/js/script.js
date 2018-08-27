@@ -122,21 +122,25 @@ $(document).ready(function () {
         var btnPlus = $(".js-tooltip__input-plus");
         var btnMinus = $(".js-tooltip__input-minus");
         var btnRemove = $(".js-tooltip__remove");
+        var btnCart = $(".b-section-cart__btn");
+        var productTitle = $(".b-content-section__title");
+        var productValue = $(".js-product-price");
+        var count = $(".js-tooltip__count");
+        var productName = $(".js-product").attr("data-name");
         var minValue = 1;
         var maxValue = 10;
 
-        $(".js-tooltip__count").keyup(function() {
+        $(count).keyup(function() {
 
             var enterValue = $(this).val();
             var currentValue = $(this).parents(".js-tooltip__section-item").find(".js-itemData");
             currentValue.val(enterValue);
         });
 
-        $(btnPlus).on( "click", function() {
+        $(btnPlus).on( "click", function () {
 
             var countValue = $(this).parents(".js-tooltip__section-item").find(".js-tooltip__count");
             var currentValue = $(this).parents(".js-tooltip__section-item").find(".js-itemData");
-            console.log(currentValue);
             var value = countValue.val();
 
             if (value < maxValue) {
@@ -163,6 +167,32 @@ $(document).ready(function () {
 
             var currentElem = $(this).parents(".js-tooltip__section-item");
             currentElem.remove();
+        });
+
+        $(btnCart).on("click", function () {
+
+            var product = "<div class='js-tooltip__section-item'>";
+                product += "<a class='js-tooltip__item' href='#'>" + productTitle.text() + "</a>";
+                product += "<label style='margin-left: 5px;'>";
+                    product += "<input class='js-tooltip__input-minus' type='button' value='&#706;'/>";
+                product += "</label>";
+                product += "<label>";
+                    product += "<input style='margin: 0 4px 0 2px;' class='js-tooltip__count' type='text' value='1'/>";
+                product += "</label>";
+                product += "<label>";
+                    product += "<input class='js-tooltip__input-plus' type='button' value='&#707;'/>";
+                product += "</label>";
+                product += "<span class='js-tooltip__badge' style='margin-left: 10px;'>" + '&#215;' + "</span>";
+                product += "<span class='js-tooltip__cy'>" + "</span>";
+                product += "<span class='js-tooltip__value'>" + productValue.text() + "</span>";
+                product += "<span class='js-tooltip__remove' title='remove item'>" + '&#215;' + "</span>";
+                product += "<label>";
+                    product += "<input class='js-itemData' type='hidden' data-name='" + productName +"' " +
+                        "data-price='"+productValue.text()+"' value=''/>";
+                product += "</label>";
+            product += "</div>";
+
+            $(".js-tooltip__quantity").append(product);
         });
     })();
 });
