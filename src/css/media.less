@@ -43,11 +43,10 @@
     width: 1000px;
     padding: 0;
     margin: 10px auto;
-    text-align: center;
   }
 
   .b-main-content {
-    width: 940px;
+    width: 1000px;
     padding: 30px;
     &__preview {
       width: 23%;
@@ -509,7 +508,7 @@
   }
 
   .b-main-content {
-    width: 720px;
+    width: 750px;
     padding: 15px;
     &__preview {
       width: 25%;
@@ -728,9 +727,7 @@
     .js-submenu-btn {
       display: inline-block;
       top: 0;
-      right: 70px;
-      color: #6d6d6d;
-      margin: 0;
+      margin-left: 55px;
       width: 50px;
       height: 40px;
     }
@@ -762,6 +759,10 @@
     margin-top: 15px;
     &__main {
       height: auto;
+      box-sizing: border-box;
+      display: inline-block;
+      width: auto;
+      margin-top: 15px;
     }
     &__aside-left {
       display: block;
@@ -819,9 +820,7 @@
   }
 
   .b-content__main {
-    display: inline-block;
-    width: 99%;
-    margin-top: 15px;
+
   }
 
   .b-items-catalog {
@@ -831,16 +830,16 @@
   }
 
   .b-tabs-content {
-    width: 25%;
+    width: 30%;
     margin: 0 5px 5px 5px;
     &__img {
-      width: 45%;
+      width: 55%;
       height: auto;
       margin-bottom: 10px;
     }
     .b-tabs-img {
       width: 100%;
-      height: auto;
+      max-height: 100%;
     }
     &__badge {
       width: 40px;
@@ -1160,7 +1159,9 @@
   }
 
   .b-container-tabs {
-    width: 99%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 15px;
   }
 
   .b-right-container {
@@ -1199,6 +1200,7 @@
 
   .b-right-aside {
     height: 180px;
+
     &__img {
       height: 1000px;
     }
@@ -1377,9 +1379,7 @@
     .js-submenu-btn {
       display: inline-block;
       top: 0;
-      right: 70px;
-      color: #6d6d6d;
-      margin: 0;
+      margin-left: 45px;
       width: 40px;
       height: 35px;
     }
@@ -1473,36 +1473,41 @@
     text-align: center;
   }
 
+  .b-container-tabs {
+    padding-top: 15px;
+  }
+
   .b-tabs-content {
-    width: 40%;
-    margin: 0 5px 5px 5px;
+    width: 45%;
+    margin: 0 5px 10px 5px;
     &__img {
-      width: 45%;
+      width: 60%;
       height: auto;
       margin-bottom: 10px;
+      box-sizing: border-box;
     }
     .b-tabs-img {
       width: 100%;
       height: auto;
     }
     &__badge {
-      width: 30px;
-      height: 30px;
-      right: 14px;
-      top: 6px;
+      width: 45px;
+      height: 45px;
+      right: -5px;
+      top: 10px;
     }
     &__badge-item {
-      font-size: 13px;
-      line-height: 30px;
+      font-size: 15px;
+      line-height: 45px;
     }
     &__badge-text {
       display: none;
     }
     &__title {
-      font-size: 14px;
+      font-size: 15px;
     }
     &__value {
-      font-size: 16px;
+      font-size: 17px;
     }
   }
 

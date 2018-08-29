@@ -27,7 +27,6 @@
 }
 
 .js-submenu-btn {
-  color: @white;
   margin-left: 3%;
   cursor: pointer;
   position: absolute;
@@ -39,7 +38,6 @@
   width: 78%;
   margin: 1% auto;
   padding-left: 2%;
-  box-shadow: 0 0 3px 1px #cdcdcd;
   border-radius: 5px;
   &__link {
     display: inline-block;
@@ -48,14 +46,18 @@
     font-family: @font_regular;
     color: #acacac;
   }
+  .is-active {
+    color: @green;
+  }
 }
 
 .b-main-content {
-  width: 74%;
+  width: 80%;
   padding: 3%;
   border: 1px solid #dedede;
   margin: 0 auto;
   border-radius: 5px;
+  box-sizing: border-box;
   &__preview {
     display: inline-block;
     vertical-align: top;

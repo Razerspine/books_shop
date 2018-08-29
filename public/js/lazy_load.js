@@ -12,7 +12,7 @@ $(document).ready(function () {
         var search = document.location.search;
         var pathUrl = document.location.pathname;
         var currentCount = search.match( /\?page=([\d]*)/);
-        console.log(search);
+
         if (currentCount && currentCount[0]) {
             getParams = search.replace(currentCount[0], "");
         }

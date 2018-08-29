@@ -319,6 +319,13 @@
     vertical-align: top;
     border: 1px solid #dedede;
   }
+  &__title {
+    font-family: @font_light;
+    margin-top: 0;
+    margin-bottom: 5%;
+    color: #848484;
+    font-size: 25px;
+  }
   .js-active {
     display: block;
   }
@@ -343,6 +350,9 @@
     &:hover {
       background-color: @green;
     }
+    &:hover > .b-nav-menu__link {
+      color: @white;
+    }
   }
   &__link {
     display: inline-block;
@@ -352,9 +362,6 @@
     font-family: @font_regular;
     color: @gray;
     padding: 8px 0 8px 0;
-    &:hover {
-      color: @white;
-    }
   }
   &__sub-menu {
     position: absolute;
@@ -401,7 +408,7 @@
     font-size: 1.2vw;
   }
   &_current {
-    outline: 1px solid #ced3d6;
+    border: 1px solid #ced3d6;
     border-bottom: 3px solid #81bd66;
   }
 }
@@ -498,7 +505,7 @@
 }
 
 .js-submenu-btn {
-  color: @white;
+  color: @black;
   margin-left: 3%;
   cursor: pointer;
   position: absolute;
@@ -516,7 +523,7 @@
   position: relative;
   &__img {
     display: inline-block;
-    width: 7vw;
+    width: auto;
     height: 11vw;
     border: 3px solid @white;
     box-shadow: 0 0 10px 2px #cdcdcd;
