@@ -1,9 +1,6 @@
-@font_light: segoe-wp-light, Arial, sans-serif;
-@font_regular: SegoeWPN, Arial, sans-serif;
-@font_bold: Segoe-bold, Arial, sans-serif;
-@font_helvetica_light: HelveticaLTStd-Light, Arial, sans-serif;
-@font_helvetica_roman: HelveticaLTStd-Roman, Arial, sans-serif;
-@font_helvetica_bold: HelveticaLTStd-Bold, Arial, sans-serif;
+@font_light: open_sanslight, Arial, sans-serif;
+@font_regular: open_sansregular, Arial, sans-serif;
+@font_bold: open_sansbold, Arial, sans-serif;
 @green: #79b260;
 @white: #ffffff;
 @gray: #6d6d6d;
@@ -104,7 +101,7 @@
     transform: translate(-50%, -50%);
     width: 65px;
     padding: 1px 3px 1px 3px;
-    font-family: @font_bold;
+    font-family: @font_regular;
     font-size: 11px;
     font-weight: bold;
     background-color: @white;
@@ -115,7 +112,7 @@
     display: block;
     text-align: justify;
     margin: 0;
-    font-family: @font_regular;
+    font-family: @font_light;
     font-size: 16px;
     color: #7e7e7e;
     word-spacing: 5px;
@@ -129,7 +126,7 @@
   margin-top: 4%;
   &__title {
     font-size: 35px;
-    font-family: @font_regular;
+    font-family: @font_bold;
     color: #015699;
 
   }
@@ -143,7 +140,7 @@
     display: inline-block;
     float: right;
     vertical-align: top;
-    font-family: @font_helvetica_bold;
+    font-family: open_sansbold, sans-serif;
     text-decoration: none;
     font-size: 24px;
     color: @white;
@@ -163,7 +160,7 @@
   border-top: 1px solid #dedede;
   padding: 2%;
   &__title {
-    font-family: @font_helvetica_roman;
+    font-family: @font_regular;
     font-size: 13px;
     color: #7f7f7f;
   }
@@ -354,7 +351,7 @@
   &__button {
     margin: 3%;
     padding: 1% 15px 1% 15px;
-    font-family: @font_helvetica_bold;
+    font-family: @font_bold;
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -397,11 +394,11 @@
     display: block;
     font-family: @font_light;
     color: #595959;
-    font-size: 18px;
+    font-size: 16px;
   }
   &__value {
     display: block;
-    font-family: @font_helvetica_roman;
+    font-family: @font_regular;
     color: #f26a6d;
     font-weight: bold;
     margin-top: 3px;

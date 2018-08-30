@@ -189,7 +189,6 @@
   .b-right-section__title {
     font-size: 17px;
     margin-top: 3px;
-    font-family: SegoeWPN, Arial, sans-serif;
   }
   .b-right-section__badge {
     font-size: 12px;
@@ -210,6 +209,9 @@
   }
   .b-nav-menu__item {
     width: 10.7%;
+  }
+  .b-nav-menu__link {
+    font-size: 16px;
   }
   .b-middle-section {
     width: 1000px;
@@ -238,7 +240,7 @@
     text-align: center;
   }
   .b-main-tabs__header {
-    font-size: 17px;
+    font-size: 16px;
     padding: 7px;
   }
   .b-main-tabs__content {
@@ -655,7 +657,7 @@
   .b-nav-menu .js-submenu-btn {
     display: inline-block;
     top: 0;
-    margin-left: 55px;
+    margin-left: 70px;
     width: 50px;
     height: 40px;
   }
@@ -864,7 +866,7 @@
     font-size: 15px;
   }
   .b-main-tabs__header {
-    font-size: 18px;
+    font-size: 16px;
     padding: 4px 3px 4px 3px;
   }
   .b-main-tabs__content {
@@ -1258,7 +1260,7 @@
   .b-nav-menu .js-submenu-btn {
     display: inline-block;
     top: 0;
-    margin-left: 45px;
+    margin-left: 60px;
     width: 40px;
     height: 35px;
   }
