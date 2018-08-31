@@ -124,11 +124,26 @@ $(document).ready(function () {
         var btnRemove = $(".js-tooltip__remove");
         var btnCart = $(".b-section-cart__btn");
         var productTitle = $(".b-content-section__title");
-        var productValue = $(".js-product-price");
         var count = $(".js-tooltip__count");
-        var productName = $(".js-product").attr("data-name");
         var minValue = 1;
         var maxValue = 10;
+        var result = $(".js-tooltip__total-value");
+        var product = $(".js-product");
+        var productValue = product.attr("data-val");
+        var productName = product.attr("data-name");
+
+        var userData = {
+            product1: {
+                name: "TheWarOfArt",
+                price: 60
+            },
+            product2: {
+                name: "TheImmortalsOfMeluha",
+                price: 80
+            },
+
+            total: parseInt(result.text())
+        };
 
         $(count).keyup(function() {
 
@@ -163,10 +178,14 @@ $(document).ready(function () {
             }
         });
 
-        $(btnRemove).on("click", function () {
+        $(btnRemove).on("click", product, function () {
 
             var currentElem = $(this).parents(".js-tooltip__section-item");
             currentElem.remove();
+            var value = currentElem.attr("data-val");
+            var result = userData.total - value;
+            userData.total = result;
+            $(".js-tooltip__total-value").html(result);
         });
 
         $(btnCart).on("click", function () {
@@ -183,16 +202,25 @@ $(document).ready(function () {
                     product += "<input class='js-tooltip__input-plus' type='button' value='&#707;'/>";
                 product += "</label>";
                 product += "<span class='js-tooltip__badge' style='margin-left: 10px;'>" + '&#215;' + "</span>";
-                product += "<span class='js-tooltip__cy'>" + "</span>";
-                product += "<span class='js-tooltip__value'>" + productValue.text() + "</span>";
+                product += "<span class='js-tooltip__cy'>"+ "$" + "</span>";
+                product += "<span class='js-tooltip__value'>" + productValue + "</span>";
                 product += "<span class='js-tooltip__remove' title='remove item'>" + '&#215;' + "</span>";
                 product += "<label>";
                     product += "<input class='js-itemData' type='hidden' data-name='" + productName +"' " +
-                        "data-price='"+productValue.text()+"' value=''/>";
+                        "data-price='"+ productValue +"' value=''/>";
                 product += "</label>";
             product += "</div>";
 
             $(".js-tooltip__quantity").append(product);
+
+                userData.product = {
+                    name: productName,
+                    price: parseInt(productValue)
+                };
+
+            var newValue = userData.total + userData.product.price;
+            userData.total = newValue;
+            result.html(newValue);
         });
     })();
 });
