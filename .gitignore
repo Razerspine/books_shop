@@ -8,3 +8,4 @@
 *.package.json
 *.package-lock.json
 *.composer.lock
+src/PSD/*
