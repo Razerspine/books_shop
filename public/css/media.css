@@ -659,7 +659,7 @@
   .b-nav-menu .js-submenu-btn {
     display: inline-block;
     top: 0;
-    margin-left: 70px;
+    right: 25%;
     width: 50px;
     height: 40px;
   }
@@ -1262,7 +1262,7 @@
   .b-nav-menu .js-submenu-btn {
     display: inline-block;
     top: 0;
-    margin-left: 60px;
+    right: 22%;
     width: 40px;
     height: 35px;
   }
