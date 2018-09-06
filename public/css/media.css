@@ -727,16 +727,17 @@
   }
   .b-accordion__item {
     display: inline-block;
-    width: 30%;
+    width: 100%;
     margin-bottom: 3px;
   }
   .b-accordion__content {
     padding: 0;
   }
   .b-accordion__link {
-    font-size: 16px;
+    box-sizing: border-box;
+    font-size: 15px;
     width: 100%;
-    padding: 1px 5px 1px 5px;
+    padding: 3px 5px 3px 5px;
   }
   .b-accordion__bottom-line {
     display: none;
@@ -1330,7 +1331,7 @@
     box-sizing: border-box;
     font-size: 15px;
     width: 100%;
-    padding: 1px 5px 1px 5px;
+    padding: 3px 5px 3px 5px;
   }
   .b-accordion__bottom-line {
     display: none;

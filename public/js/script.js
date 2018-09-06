@@ -60,6 +60,16 @@ $(document).ready(function () {
             $(content).mouseleave(function () {
                 $(content).slideUp();
             });
+
+            $(function() {
+
+                $(content).swipe( {
+                    swipeRight:function() {
+                        content.slideUp();
+                    },
+                    threshold:0
+                });
+            });
         });
     })();
 
@@ -73,6 +83,16 @@ $(document).ready(function () {
 
             $(wishContent).mouseleave(function () {
                 $(wishContent).slideUp();
+            });
+
+            $(function() {
+
+                $(wishContent).swipe( {
+                    swipeRight:function() {
+                        wishContent.slideUp();
+                    },
+                    threshold:0
+                });
             });
         });
     })();
