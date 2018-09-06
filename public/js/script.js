@@ -56,19 +56,32 @@ $(document).ready(function () {
 
         $(cart).hover(function () {
             $(content).slideDown();
+        },
+            function () {
+            cart.show(); //fix for mobile version
+        });
 
-            $(content).mouseleave(function () {
-                $(content).slideUp();
+        $(content).mouseleave(function () {
+            $(content).slideUp();
+        });
+
+        $(function() {
+
+            $(content).swipe( {
+                swipeRight:function() {
+                    content.slideUp();
+                },
+                threshold:0
             });
+        });
 
-            $(function() {
+        $(function() {
 
-                $(content).swipe( {
-                    swipeRight:function() {
-                        content.slideUp();
-                    },
-                    threshold:0
-                });
+            $(content).swipe( {
+                swipeLeft:function() {
+                    content.slideUp();
+                },
+                threshold:0
             });
         });
     })();
@@ -79,20 +92,33 @@ $(document).ready(function () {
         var wishContent = $(".js-tooltip-wish");
 
         $(wishList).hover(function () {
-            $(wishContent).slideDown();
-
-            $(wishContent).mouseleave(function () {
-                $(wishContent).slideUp();
+                $(wishContent).slideDown();
+            },
+            function () {
+                wishList.show(); //fix for mobile version
             });
 
-            $(function() {
+        $(wishContent).mouseleave(function () {
+            $(wishContent).slideUp();
+        });
 
-                $(wishContent).swipe( {
-                    swipeRight:function() {
-                        wishContent.slideUp();
-                    },
-                    threshold:0
-                });
+        $(function() {
+
+            $(wishContent).swipe( {
+                swipeRight:function() {
+                    wishContent.slideUp();
+                },
+                threshold:0
+            });
+        });
+
+        $(function() {
+
+            $(wishContent).swipe( {
+                swipeLeft:function() {
+                    wishContent.slideUp();
+                },
+                threshold:0
             });
         });
     })();
